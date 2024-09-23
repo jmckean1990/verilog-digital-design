@@ -5,9 +5,9 @@ module uart_receiver(
     input dataValue,
     output [7:0] data
 );
-    // 1MHz clock --> baud period of 104us, 104 counts per period
+    // 100MHz clock --> baud period of 10416us, 10416 counts per period
     localparam BAUD_RATE = 9600;
-    localparam BOARD_CLOCK = 1_000_000;
+    localparam BOARD_CLOCK = 100_000_000;
     localparam BAUD_CLOCK_PERIOD = BOARD_CLOCK / BAUD_RATE;     
     localparam BAUD_HALF_PERIOD = BAUD_CLOCK_PERIOD / 2;
 
